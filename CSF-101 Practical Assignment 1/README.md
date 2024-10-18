@@ -27,61 +27,20 @@ File operations was used to open the files to read and write on the files, 'with
 4. Spell Checker Algorithm: iterates through each word in the input file and checks its existence in the dictionary.
 
 ## Performance Analysis
-1. Time Complexity:
-* Dictionary Loading: O(D), where D is the number of words in the dictionary.
-* Spell Checking (for N words): O(N), where N is the number of words in the input text.
+The code has a time complexity of O(n) where n is the number of words in the text
 
-* Total Time Complexity:
-O(D + N + M * D * L)
+## Challenges And Solutions
+1. problem : It was difficult for me to get the right links and guides on the internet to tackle the problem.
+2. problem : One of the main challenge was to clear the non-dongkha characters from the dzongkha dictionary, and comparing it with the given txt, i had no idea how to go about with the problem.
+1. solution : AI Copilot guided me with the links to videos and sometimes with codelines.
+2. solution : by using UTF-8 encoding helped me remove non-dzongkha characters.
 
-2. Space Complexity:
-* Dictionary Storage: O(D * L), where L is the average word length.
-* Input Text Storage: O(N * W), where W is the average length of words in the input text.
-
-* Total Space Complexity:
-O(D * L + N * W)
-
-## Challenges and Solutions
-1. Character Encoding Issues:
-
-    * Challenge: Misinterpretation of Dzongkha characters due to inconsistent encodings.
-    * Solution: Use UTF-8 encoding consistently.
-
-2. Dictionary Completeness:
-
-    * Challenge: Missing words can lead to false positives.
-    * Solution: Continuously update and expand the dictionary.
-
-3. Handling Compound Words and Affixes:
-
-    * Challenge: Missed valid words due to compounds and affixes not in the dictionary.
-    * Solution: Recognize common compounds and affixes.
-4. User Interface and Usability:
-
-    * Challenge: Difficulty for non-technical users to utilize the tool.
-    * Solution: Develop a user-friendly GUI.
-5. Performance with Large Files:
-
-    * Challenge: Slow processing times with large input and dictionary files.
-    * Solution: Optimize algorithms for better performance.
-6. Regular Expression Limitations:
-
-    * Challenge: Edge cases may not be handled correctly.
-    * Solution: Thoroughly test and adjust regex patterns.
-7. Maintenance and Updates:
-
-    * Challenge: Keeping the dictionary current can be resource-intensive.
-    * Solution: Establish a regular update process.
-8. Error Handling:
-
-    * Challenge: Robust error handling for file operations is needed.
-    * Solution: Implement thorough exception handling.
 
 ## References
-1. Dzongkha Language Resources
+1. Dzongkha Resources
     * Dzongkha Unicode. (n.d.). Unicode Consortium. Retrieved from https://www.unicode.org/charts/PDF/U0F00.pdf 
 2. Programming Libraries and Tools
-    * python-docx. (n.d.). python-docx Documentation. Retrieved from https://python-docx.readthedocs.io/en/latest/
-    * Requests: HTTP for Humans. (n.d.). Requests Documentation. Retrieved from https://docs.python-requests.org/en/latest/
-    * Regular Expressions. (n.d.). Python re module documentation. Retrieved from https://docs.python.org/3/library/re.html
-    * AI like chatGPT, BlackBox
+    * #https://www.youtube.com/watch?v=Mi3j54ZMxOc
+    * #https://www.youtube.com/watch?v=L2BDTy4bEcg
+    
+    * AI like chatGPT, Copilot, BlackBox
