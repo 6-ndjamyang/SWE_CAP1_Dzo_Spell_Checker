@@ -38,9 +38,9 @@ The code has a time complexity of O(n) where n is the number of words in the tex
 
 ## References
 1. Dzongkha Resources
-    * Dzongkha Unicode. (n.d.). Unicode Consortium. Retrieved from https://www.unicode.org/charts/PDF/U0F00.pdf 
+    * [Dzongkha Unicode. (n.d.). Unicode Consortium]('https://www.unicode.org/charts/PDF/U0F00.pdf') 
 2. Programming Libraries and Tools
-    * #https://www.youtube.com/watch?v=Mi3j54ZMxOc
+    * [YouTube Video](https://www.youtube.com/watch?v=Mi3j54ZMxOc)
     * #https://www.youtube.com/watch?v=L2BDTy4bEcg
     
     * AI like chatGPT, Copilot, BlackBox
