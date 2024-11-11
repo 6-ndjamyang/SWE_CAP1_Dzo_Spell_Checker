@@ -16,24 +16,24 @@
 # Solution
 #########################
 
-#I imported the external files. The re stands for “regular expressions”, and helps to work with the methods of re.
-import re
 
-def extract_words(text):
-    #In this part I got help from AI as I didn't know how dzongkha characters were represented
-    words = re.findall(r'[\u0F00-\u0FFF]+', text) 
-    return set(words)  
+def get_words_from_file(filename):
+    with open(filename, encoding="utf-8") as file:
+        content = file.read()
     
-    #Here open() function opens a file in read mode ('r').The "utf-8" argument ensures that the file is read using UTF-8 encoding which handles various character sets.
-with open("342.txt", encoding="utf-8") as file:
-    content1 = file.read()
-    word1 = extract_words(content1)
-    # Again i opened the file using open() function to open the cleaned fileand it reads the content inside into the variable named content2.
-with open("cleaned_file.txt", encoding="utf-8") as file:
-    content2 = file.read()
-    word2 =extract_words(content2)
-    #In this part it calculates the difference between two sets word1 and word2.
-unique_to_file1 = word1.difference(word2)  
-    #This loop iterates over a collection of words and prtints out incorrect if there is difference in word1 and word2.
-for word in unique_to_file1:
+    words = content.split()
+    # Return unique words
+    return set(words)
+
+# Read words from both files
+words_in_dictionary = get_words_from_file("342.txt")
+words_in_cleanedfile = get_words_from_file("cleaned_file.txt")
+
+# Find difference in words
+unique_words = words_in_dictionary.difference(words_in_cleanedfile)
+
+# Output each unique word from dictionary
+for word in unique_words:
     print(f"The word '{word}' from 342.txt is incorrect.")
+
+
